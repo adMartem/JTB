@@ -1,0 +1,10 @@
+EDU/purdue/jtb/syntaxtree/
+EDU/purdue/jtb/visitor/Depth*.*
+EDU/purdue/jtb/visitor/I*.*
+EDU/purdue/jtb/parser/JTBParser.java
+EDU/purdue/jtb/parser/JTBParserConstants.java
+EDU/purdue/jtb/parser/JTBParserTokenManager.java
+EDU/purdue/jtb/parser/JavaCharStream.java
+EDU/purdue/jtb/parser/ParseException.java
+EDU/purdue/jtb/parser/Token.java
+EDU/purdue/jtb/parser/TokenMgrError.java
