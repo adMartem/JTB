@@ -68,7 +68,7 @@
 		<dependency>
 			<groupId>net.java.dev.javacc</groupId>
 			<artifactId>javacc</artifactId>
-			<version>7.0.0</version>
+			<version>7.0.10</version>
 		</dependency>
 	</dependencies>
 	<description>JTB is a syntax tree builder to be used with the Java Compiler Compiler (JavaCC) parser generator. 

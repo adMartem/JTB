@@ -4,7 +4,7 @@
 <project name="javacc_props" default="echo_javacc_props">
 
 	<!-- Set this JavaCC jar's directory according to your environment -->
-	<property name="javacc_imp_dir" value="D:\Devs\Parsers-workspace\javacc-svn_java.net\target" />
+	<property name="javacc_imp_dir" value="lib" />
 	<!--property name="javacc_imp_dir" value="Z:/git/javacc/target" / -->
 
 	<!-- JavaCC jar to use -->

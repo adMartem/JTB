@@ -1246,7 +1246,8 @@ class BaseClasses {
    * @return the generated visit method
    */
   static StringBuilder genRetArguVisitNodeTCF(final StringBuilder aSb) {
-    return genRetArguVisitAnyNode(aSb, 280, nodeTCF);
+    return aSb;
+//    return genRetArguVisitAnyNode(aSb, 280, nodeTCF);
   }
 
   /**
@@ -1355,7 +1356,8 @@ class BaseClasses {
    * @return the generated visit method
    */
   static StringBuilder genRetVisitNodeTCF(final StringBuilder aSb) {
-    return genRetVisitAnyNode(aSb, 250, nodeTCF);
+    return aSb;
+//    return genRetVisitAnyNode(aSb, 250, nodeTCF);
   }
 
   /**
@@ -1465,7 +1467,8 @@ class BaseClasses {
    * @return the generated visit method
    */
   static StringBuilder genVoidArguVisitNodeTCF(final StringBuilder aSb) {
-    return genVoidArguVisitAnyNode(aSb, 260, nodeTCF);
+    return aSb;
+//    return genVoidArguVisitAnyNode(aSb, 260, nodeTCF);
   }
 
   /**
@@ -1572,7 +1575,8 @@ class BaseClasses {
    * @return the generated visit method
    */
   static StringBuilder genVoidVisitNodeTCF(final StringBuilder aSb) {
-    return genVoidVisitAnyNode(aSb, 230, nodeTCF);
+    return aSb;
+//    return genVoidVisitAnyNode(aSb, 230, nodeTCF);
   }
 
   /**

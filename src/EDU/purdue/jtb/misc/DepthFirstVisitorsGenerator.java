@@ -465,42 +465,43 @@ public class DepthFirstVisitorsGenerator {
         final String fe = fei.next();
 
         if (nodeTCF.equals(ft)) {
+          continue;          
           // a TCF
-          if (fe != null) {
-            // java block
-            if (inCatch == 1)
-              inCatch = 2;
-            else if (inCatch == 2)
-              sb.append(' ');
-            sb.append(fe);
-            if (inCatch == 0)
-              sb.append(LS);
-          } else {
-            final String tcfStr = fi.substring(6 + nodeTCF.length(), fi.length() - 2);
-            if ("try".equals(tcfStr)) {
-              sb.append(spc.spc).append("try");
-            } else if ("{".equals(tcfStr)) {
-              sb.append(" {").append(LS);
-              spc.updateSpc(+1);
-            } else if ("}".equals(tcfStr)) {
-              spc.updateSpc(-1);
-              sb.append(spc.spc).append('}').append(LS);
-            } else if ("catch".equals(tcfStr)) {
-              sb.append(spc.spc).append("catch");
-            } else if ("(".equals(tcfStr)) {
-              inCatch = 1;
-              sb.append(" (");
-            } else if (")".equals(tcfStr)) {
-              inCatch = 0;
-              sb.append(") ");
-            } else if ("finally".equals(tcfStr)) {
-              sb.append(spc.spc).append("finally ");
-            } else {
-              // should not come here !
-            }
-          }
-          // skip TCF comment
-          k++;
+//          if (fe != null) {
+//            // java block
+//            if (inCatch == 1)
+//              inCatch = 2;
+//            else if (inCatch == 2)
+//              sb.append(' ');
+//            sb.append(fe);
+//            if (inCatch == 0)
+//              sb.append(LS);
+//          } else {
+//            final String tcfStr = fi.substring(6 + nodeTCF.length(), fi.length() - 2);
+//            if ("try".equals(tcfStr)) {
+//              sb.append(spc.spc).append("try");
+//            } else if ("{".equals(tcfStr)) {
+//              sb.append(" {").append(LS);
+//              spc.updateSpc(+1);
+//            } else if ("}".equals(tcfStr)) {
+//              spc.updateSpc(-1);
+//              sb.append(spc.spc).append('}').append(LS);
+//            } else if ("catch".equals(tcfStr)) {
+//              sb.append(spc.spc).append("catch");
+//            } else if ("(".equals(tcfStr)) {
+//              inCatch = 1;
+//              sb.append(" (");
+//            } else if (")".equals(tcfStr)) {
+//              inCatch = 0;
+//              sb.append(") ");
+//            } else if ("finally".equals(tcfStr)) {
+//              sb.append(spc.spc).append("finally ");
+//            } else {
+//              // should not come here !
+//            }
+//          }
+//          // skip TCF comment
+//          k++;
         } else {
           // not a TCF
           ci.fmt1JavacodeFieldCmt(sb, spc, k++, null);
@@ -828,21 +829,21 @@ public class DepthFirstVisitorsGenerator {
   static StringBuilder genNodeTCFVisit(final StringBuilder aSb, final Spacing aSpc,
                                        final boolean aRet, final boolean aArgu) {
     StringBuilder sb = aSb;
-    if (sb == null)
-      sb = new StringBuilder(680);
-
-    baseNodeVisitMethodBegin(sb, aSpc, aRet, aArgu, true, nodeTCF);
-    if (aRet)
-      sb.append(aSpc.spc).append(genRetType).append(' ').append(genRetVar).append(" = null;")
-        .append(LS);
-    sb.append(aSpc.spc).append("@SuppressWarnings(\"unused\")").append(LS);
-    sb.append(aSpc.spc).append("final String tkIm = ").append(genNodeVar).append(".tokenImage;")
-      .append(LS);
-    sb.append(aSpc.spc).append("return");
-    if (aRet)
-      sb.append(' ').append(genRetVar);
-    sb.append(';').append(LS);
-    baseNodeVisitMethodCloseBrace(sb, aSpc);
+//    if (sb == null)
+//      sb = new StringBuilder(680);
+//
+//    baseNodeVisitMethodBegin(sb, aSpc, aRet, aArgu, true, nodeTCF);
+//    if (aRet)
+//      sb.append(aSpc.spc).append(genRetType).append(' ').append(genRetVar).append(" = null;")
+//        .append(LS);
+//    sb.append(aSpc.spc).append("@SuppressWarnings(\"unused\")").append(LS);
+//    sb.append(aSpc.spc).append("final String tkIm = ").append(genNodeVar).append(".tokenImage;")
+//      .append(LS);
+//    sb.append(aSpc.spc).append("return");
+//    if (aRet)
+//      sb.append(' ').append(genRetVar);
+//    sb.append(';').append(LS);
+//    baseNodeVisitMethodCloseBrace(sb, aSpc);
 
     return sb;
   }
